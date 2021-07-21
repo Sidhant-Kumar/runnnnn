@@ -10,5 +10,6 @@ def home(request):
     data = {
         'title':'hmmmm',
         'work': 'i think it is working',
+        'list': ['php','java','c']
     }
     return render(request, 'index.html',data)

@@ -6,5 +6,20 @@
 </head>
 <body>
     <h1>{{work}}</h1>
+    {% for n in list%}
+    <div>{{n}}</div>
+    {% endfor %}
+    <br/>
+    <table border="1" cellpadding="10">
+        <tr >
+            <th>name</th>
+            <th>phone</th>
+        </tr>
+    {% for k in list %}
+        <tr>
+            <td>{{k}}</td>
+        </tr>
+    {% endfor %}
+    </table>
 </body>
 </html>
