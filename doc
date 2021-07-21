@@ -1,0 +1,57 @@
+~ model view template/ MVT : it is a software design pattern.
+ it is a collection of model, view and template.
+
+model: it is going to act as an interface of your data. it is used             to handle all the data, data such as interfacing the data              consisting of databases, storing and moving the                       databases. it basically deals with the databases.
+view: it is the user interface. views are FUNCTION based as           well as CLASS based.
+template: it consist of static parts of the desired html output as                 well as some special syntax describing how dynamic                 content will be inserted.
+
+so what actually happens is simple:
+first: opening a url will call the view function of the page.
+second: then view will ask the model/database for any data               such as photos or something.
+third: then model will get the data and give it to the template to           show it using the html.
+
+this is how django framework works.
+
+
+1/07/2021
+
+wsgi.py file --- web server gateway interface
+python manage.py runserver
+python manage.py startapp
+
+django-admin startproject project-name
+
+views.py: create a view file using html that will be displayed to the user using a function that we have defined in the urls.py file.
+urls.py: create a response system for whatever the user calls and specify the urls or an html response is provided.
+
+
+
+19/07/2021
+
+Media: here we will be keeping all the uploaded/dynamic files through the frontend or something.
+
+Static: here we will be placing the js, css, fonts and images files will be placed.
+
+
+
+21/07/2021
+
+Make a static file and templates file move all the html files in templates and move all the js, css, fonts and images in the static file.
+
+then introduce static file location in your project the file that we created in the settings of the code.
+the line that we have to write in the setting.py is
+
+STATICFILES_DIRS=[
+   BASE_DIR, 'static'
+]
+
+in the above code static is the name of the folder in which we are putting all those files.
+then to implement the code of js and css we have to make some changes in the href we have to insert
+
+/static/....
+
+that's all we have to do to implement the static files
+
+to use the if and for loop in html refer to the code of this day on git
+{{}} is used to display any values
+{%%} is used to display any data of python and while doing looping and python code in html.
